@@ -6,7 +6,7 @@ public class Precio {
         
         double precio = 9.50;
 
-        System.out.println(setPrecio(precio));
+        System.out.println("Precio con IVA(23%): " + setPrecio(precio));
 
     }
 
