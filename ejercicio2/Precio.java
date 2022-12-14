@@ -14,8 +14,8 @@ public class Precio {
 
     static double setPrecio(double precio) {
 
-        double iva = 0.5;
-        return precio + iva;
+       double iva = 23.0/100.0;
+        return (iva * precio) + precio;
 
     }
 
