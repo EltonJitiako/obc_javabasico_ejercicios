@@ -9,7 +9,7 @@ public class TiposDatos {
 
     public static void main(String[] args){
 
-        //Interos
+        //Enteros
         byte var1 = 9;
         short var2 = 23;
         int var3 = 300;
