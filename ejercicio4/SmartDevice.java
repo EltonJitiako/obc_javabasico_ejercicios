@@ -30,7 +30,6 @@ class SmartPhone extends SmartDevice {
 
 }
 
-
 class SmartWatch extends SmartDevice {
     String colorCorrea;
 
