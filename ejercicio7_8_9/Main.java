@@ -168,9 +168,11 @@ public class Main {
 
             InputStream in = new FileInputStream(fileIn);
             byte []datos = in.readAllBytes();
+            in.close();
 
             PrintStream out = new PrintStream(fileOut);
             out.write(datos);
+            out.close();
 
         } catch (Exception e) {
         
