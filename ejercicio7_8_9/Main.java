@@ -106,7 +106,19 @@ public class Main {
         }
 
         //Throws
-        DividePorCero();
+        try {
+
+            DividePorCero(3, 0);
+
+        }catch(ArithmeticException e) {
+
+            System.out.println("Esto no puede hacerse");
+
+        }finally {
+
+          System.out.println("Demo de código");
+
+        }
 
         //InputStream y PrintStream
 
@@ -129,11 +141,7 @@ public class Main {
 
     }
 
-    public static void DividePorCero() throws ArithmeticException { 
-
-        int a = 3;
-        int b = 0;
-
+    public static void DividePorCero(int a, int b) throws ArithmeticException { 
 
         try {
 
@@ -142,11 +150,7 @@ public class Main {
 
         }catch(ArithmeticException e) {
 
-            System.out.println("Esto no puede hacerse");
-
-        }finally {
-
-          System.out.println("Demo de código");
+            throw new ArithmeticException();
 
         }
 
