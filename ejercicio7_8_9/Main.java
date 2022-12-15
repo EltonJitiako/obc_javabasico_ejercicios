@@ -1,5 +1,8 @@
 package ejercicio7_8_9;
 
+import java.io.FileInputStream;
+import java.io.InputStream;
+import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Vector;
@@ -110,7 +113,7 @@ public class Main {
 
             DividePorCero(3, 0);
 
-        }catch(ArithmeticException e) {
+        }catch(Exception e) {
 
             System.out.println("Esto no puede hacerse");
 
@@ -122,6 +125,9 @@ public class Main {
 
         //InputStream y PrintStream
 
+        String fileIn = "/Users/eltonluizjitiako/Documents/fileIn.txt";
+        String fileOut = "/Users/eltonluizjitiako/Documents/fileOut.txt";
+        fileInOut(fileIn, fileOut);
 
         //Sorpréndenos
         //El codigo esta en la carpeta 'ejercicio7_8_9/sorprendenos'
@@ -151,6 +157,24 @@ public class Main {
         }catch(ArithmeticException e) {
 
             throw new ArithmeticException();
+
+        }
+
+    }
+
+    private static void fileInOut(String fileIn, String fileOut) {
+
+        try {
+
+            InputStream in = new FileInputStream(fileIn);
+            byte []datos = in.readAllBytes();
+
+            PrintStream out = new PrintStream(fileOut);
+            out.write(datos);
+
+        } catch (Exception e) {
+        
+            System.out.println("Exception: " + e.getMessage());;
 
         }
 
