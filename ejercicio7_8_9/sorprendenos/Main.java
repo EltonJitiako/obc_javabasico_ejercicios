@@ -1,7 +1,6 @@
 package ejercicio7_8_9.sorprendenos;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintStream;
@@ -64,10 +63,14 @@ public class Main {
 
         String listString = "";
         for (String nombre : nombresList) {
+
             listString += nombre + ", ";
+
         }
-        System.out.println(listString);
+
+        System.out.println("Despues: " + listString);
         byte[] novoDatos = listString.getBytes(StandardCharsets.UTF_8);
+
         return (novoDatos);
     }
 
@@ -100,6 +103,7 @@ public class Main {
 
         ArrayList<String> nombresList = new ArrayList<>();
         String nombresString = new String(datos, StandardCharsets.UTF_8);
+        System.out.println("Antes: " + nombresString);
         String nombre = "";
         for (char i : nombresString.toCharArray()) {
 
